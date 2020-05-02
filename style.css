@@ -1,9 +1,9 @@
 body {
     background-color: #ffffff;
-    margin: auto;
+    padding: 0;
     display: block;
-    width: 800px;
     height: auto;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -29,22 +29,14 @@ h6 {
     text-align: center;
 }
 
-/* .names {
-    background-color: #7289da;
-    color: white;
-    border: 1px #99aab5;
-    padding: 10px 24px;
-    width: 75%;
-    text-align: center;
-    margin:auto;
-} */
-
-.row {
-    margin-left: 30%;
+ul {
+    width: 48%;
 }
-.column {
+
+.row .column {
     float: left;
     width: 100%;
+    margin-left: 25%;
 }
 
 .row:after {
@@ -59,10 +51,11 @@ h6 {
     color: white;
     padding: 10px 24px;
     cursor: pointer;
-    width: 50%;
+    width: 48%;
     display: block;
     margin: 7px;
     font-size: 1.5vw;
+    float: left;
 }
 
 .buttons button:hover {
@@ -70,12 +63,29 @@ h6 {
 }
 
 .tasks {
-    margin-left: 25%; 
-    width: 100%;
+    margin-left: 26%; 
+    width: 50%;
 }
 
-@media screen and (max-width: 400px) {
+.padding {
+    height: 100px;
+}
+
+@media screen and (max-width: 1500px) {
     .left, .main, .right {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        width: 100%; /*The width is 100%, when the viewport is 800px or smaller */
+    }
+
+    .buttons button {
+        width: 50%;
+    }
+
+    ul {
+        width: 100%;
+        margin-left: -2%;
+    }
+    
+    .tasks {
+        width: 100%;
     }
 }
